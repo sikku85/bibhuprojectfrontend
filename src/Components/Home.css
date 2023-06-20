@@ -1,0 +1,72 @@
+.maincontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 95vh;
+    font-size: larger;
+    /* background-color: #452c63; */
+    
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
+    /* justify-content:space-evenly; */
+
+}
+.no-flex{
+    flex: none;
+}
+.element{
+    padding: 3px;
+    
+
+}
+
+.abcd{
+    /* height: 50vh; */
+    min-height: 50vh;
+    width: 20vw;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 4%;
+    /* background-color: rebeccapurple; */
+    box-shadow: 0 0 10px 5px rgba(0,0,0,0.3); /* Set the blur shadow effect */
+    font-family: 'Times New Roman', Times, serif;
+    justify-content:flex-start;
+
+
+
+}
+.card{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 70vw;
+    background-color: red;
+}
+
+.title:hover{
+    color: blue;
+    /* font-size: large; */
+    /* font-family: 'Times New Roman', Times, serif; */
+    
+}
+
+ul{
+    list-style-type:circle; /* Set the type of bullet point */
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    margin: 0;
+    padding: 0;
+    /* float: left; */
+  }
+.eligible{
+    border: 1px solid white;
+    margin-bottom: 3rem;
+    padding: 5px;
+}

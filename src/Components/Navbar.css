@@ -1,0 +1,34 @@
+.wrapper{
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    height: 5vh;
+    /* background-image: linear-gradient(to right, #434343 0%, black 100%); */
+    /* background-color: #a28089; */
+    background-color: #212121;
+
+}
+.navbar{
+    width: 70vw;
+    /* background-color: greenyellow; */
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    
+
+}
+.left{
+    display: flex;
+    flex-direction: row;
+
+}
+.left .btn{
+    margin: 3px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+.active{
+    color: white;
+}
+.Testdecoration{
+    text-decoration: none;
+}

@@ -1,0 +1,20 @@
+.admitcardcontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    flex-direction: column;
+    font-weight: bolder;
+    margin-top: 200px;
+}
+.admitcardcontainer .link{
+    color: black;
+}
+
+.admitcardcontainer .link:hover{
+    color: red;
+}
+.aditem{
+    padding: 10px;
+    
+}

@@ -1,0 +1,16 @@
+.form-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+  }
+  .foamcontainer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:column;
+  }
+
+button:hover{
+    cursor: pointer;
+}
+

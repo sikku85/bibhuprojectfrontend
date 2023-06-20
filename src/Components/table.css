@@ -1,0 +1,132 @@
+
+.container{
+    /* background-image: linear-gradient(to right, #434343 0%, black 100%); */
+    height: 100vh;
+    display: grid;
+    row-gap: 4px;
+    column-gap: 4px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px 1fr 1f 1fr 1fr;
+    justify-content: center;
+    /* align-items: center; */
+    /* align-items: center; */
+    /* background-color: rebeccapurple; */
+}
+.item{
+    
+    /* background-color:brown; */
+    /* height: 50px;
+    width: 50px; */
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    /* margin-top: 50px; */
+    border-radius: 10px;
+    border:  1px solid ;
+    /* color: white; */
+    
+    
+}
+.item1{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    border: 0px;
+    
+}
+.item6{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    font-size: larger;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: 0px;
+    
+}
+/* button:hover{
+    cursor: pointer;
+    background-color: lightgrey;
+    border: 1px solid white ;
+} */
+
+button{
+    border: 0px;
+    border-radius: 10px;
+    font-size: large;
+    padding: 10px;
+    /* margin-top: 20px; */
+    margin: 12px 10px;
+
+
+}
+button .nav-link {
+    text-decoration: none;
+  }
+
+.coloring{
+    color: red;;
+}
+.sizes{
+    font-weight: 600;
+}
+.eletitle{
+    font-weight: 600;
+
+}
+
+.tablebutton button:hover{
+    cursor: pointer;
+    background-color: lightblue;
+}
+.tablebutton .nav-link{
+    color: black;
+}
+.tablebutton .nav-link:hover{
+    color: blue;
+}
+
+.elecard{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.maincardcontainers{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height: 90vh; */
+    margin-top: 40px;
+}
+.element{
+    margin: 10px 0px;
+}
+.elements{
+    display: flex;
+    justify-content:space-between;
+}
+.insideelement{
+    padding: 5px;
+}
+
+.sticky-header {
+    position: sticky;
+    top: 0px;
+    background-color: #f1f1f1; 
+    /* Additional styling properties */
+    /* padding: 10px; */
+    border-bottom: 1px solid #ccc;
+  }
+  
+.elecard .card{
+    /* background-color: red; */
+    margin: 0px 10px;
+
+}
+.applynow{
+    color: blue;
+}
+.applynow:hover{
+    cursor: pointer;
+    color: red;
+}
