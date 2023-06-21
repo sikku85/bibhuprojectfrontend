@@ -62,7 +62,7 @@ export const AdmitcardHomeTable = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        Download Now
+                        Download
                       </a>
                     </span>
                   </button>

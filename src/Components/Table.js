@@ -124,7 +124,7 @@ export const Table = () => {
       </div>
 
       <div className="tablebutton">
-      <button class="rainbow-hover"><a href={item.apply}>Apply Now</a></button>
+      <button class="rainbow-hover"><a href={item.apply} target="_blank">Apply Now</a></button>
         {/* <button style={{pointerEvents:"none",opacity:"0.5"}}>
           <NavLink to="/eligible" className="nav-link ">
             Check eligiablity

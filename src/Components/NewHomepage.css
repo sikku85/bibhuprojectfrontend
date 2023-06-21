@@ -7,7 +7,8 @@
     /* background-color: #e8e8e8; */
     /* background-color: #44b09e; */
     /* background-color: #7f5a83; */
-    background: linear-gradient(to top, #a1b8e2 0%, #a2b7de 1%, #5b78aa 100%);
+    /* background: linear-gradient(to top, #a1b8e2 0%, #a2b7de 1%, #5b78aa 100%); */
+    background-color:#006d6f;
     /* background: linear-gradient(109.6deg, rgb(223, 234, 247) 11.2%, rgb(244, 248, 252) 91.1%); */
 
 
@@ -65,11 +66,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0.7;
     }
 
   .input-field{
-    border-radius: 3px;
-    border: 1px solid wheat;
+    border-radius: 1px;
+    border: 0px solid black;
   }
   .card-content p {
     margin-bottom: 10px;
@@ -86,12 +88,15 @@
 
 .sectionpage1{
     margin-top: 70px;
-    border: 1px solid #22C55E;
+    /* border: 1px solid #22C55E; */
     background-color: white;
 }
 .sectiontitle{
     font-size: larger;
     font-weight: bolder;
+    background-color: brown;
+    color: white;
+    padding: 10px;
 }
 .onhover:hover{
     color: blue;
@@ -121,6 +126,7 @@
 
 }
 .urltitle{
+  color: red;
 
 }
 .searchPost{
@@ -143,7 +149,7 @@
   border-radius: 6px;
 }
 .btnhome button{
-  font-size:15px;
+  font-size:10px;
 }
 .btnhome{
   display: flex;
