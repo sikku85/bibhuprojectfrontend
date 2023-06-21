@@ -25,7 +25,7 @@ export const Hometable = () => {
       <input
         className="searchPost  input-field"
         type="text"
-        placeholder="Type Here...."
+        placeholder="Search post"
         value={searchQuery}
         onChange={handleSearch}
       />

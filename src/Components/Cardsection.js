@@ -52,7 +52,7 @@ export const Cardsection = () => {
               /> */}
               <ul>
                 {filteredResults.map((ele) => (
-                  <div key={ele.id} onClick={() => clickHadler(ele._id)} >
+                  <li key={ele.id} onClick={() => clickHadler(ele._id)} >
                     
                     <NavLink 
                       to="/table"
@@ -60,7 +60,7 @@ export const Cardsection = () => {
                     >
                       <span className="onhover">{ele.title}</span>
                     </NavLink>
-                  </div>
+                  </li>
                 ))}
               </ul>
             </div>
@@ -77,7 +77,7 @@ export const Cardsection = () => {
               /> */}
               <ul>
                 {filteredResults2.map((ele) => (
-                  <div
+                  <li
                     key={ele._id}
                     onClick={() => clickHadleradmitcard(ele._id)}
                     // style={{ paddingLeft: "10px", borderLeft: "2px solid black" }}
@@ -89,7 +89,7 @@ export const Cardsection = () => {
                       <span className="onhover">{ele.title}</span>
                       
                     </NavLink>
-                  </div>
+                  </li>
                   
                 ))}
               </ul>
@@ -107,7 +107,7 @@ export const Cardsection = () => {
               /> */}
               <ul>
                 {filteredResults.map((ele) => (
-                  <div key={ele.id} onClick={() => clickHadler(ele._id)} >
+                  <li key={ele.id} onClick={() => clickHadler(ele._id)} >
                     
                     <NavLink 
                       to="/table"
@@ -115,7 +115,7 @@ export const Cardsection = () => {
                     >
                       <div className="onhover testelement">{ele.title}</div>
                     </NavLink>
-                  </div>
+                  </li>
                 ))}
               </ul>
             </div>

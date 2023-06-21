@@ -148,8 +148,12 @@ button .nav-link {
 .afjf{
         /* background-color: #44b09e; */
         /* width: 90vw; */
-        background: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);  
         height: 95vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #006d6f;
 }
 
 .eletitle{

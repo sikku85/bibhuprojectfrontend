@@ -62,9 +62,10 @@ table {
     background: linear-gradient(to top, #00154c, #12376e, #23487f);
   }
   .searchPost{
-    border-radius: 10px;
+    border-radius: 5px;
     color: white;
     background: linear-gradient(to top, #00154c, #12376e, #23487f);
+    /* background-color: #2C3539; */
 
   
   }

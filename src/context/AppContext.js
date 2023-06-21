@@ -19,8 +19,8 @@ export default function AppContextProvider({children}){
         try {
 
           
-          const response = await fetch("http://localhost:4000/api/v1/upload/allimages");
-          const admitcardresponse=await fetch("http://localhost:4000/api/v1/upload/admitcardresult");
+          const response = await fetch(" https://7a86-2409-408a-e89-da8-b178-3e70-a5c-3ec4.ngrok-free.app/api/v1/upload/allimages");
+          const admitcardresponse=await fetch("https://7a86-2409-408a-e89-da8-b178-3e70-a5c-3ec4.ngrok-free.app/api/v1/upload/admitcardresult");
           const data = await response.json();
           const admitcarddata=await admitcardresponse.json();
           console.log(data);
