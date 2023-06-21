@@ -12,7 +12,7 @@ export const Table = () => {
     navigate(-1);
   }
   return (
-    <div>
+    <div className="afjf">
       <div className="maincardcontainers">
         <div className="eletitle element">{item.title}</div>
 
@@ -22,11 +22,11 @@ export const Table = () => {
               <h3 class="sticky-header">Dates</h3>
               <div className="DateContainer">
                 <div className="elements">
-                  <div className="insideelement">StartDate</div>
+                  <div className="insideelement">STARTDATE</div>
                   <div className="insideelement">{item.startDate}</div>
                 </div>
                 <div className="elements">
-                  <div className="insideelement">LastetDate</div>
+                  <div className="insideelement">LASTDATE</div>
                   <div className="insideelement">{item.lastDate}</div>
                 </div>
               </div>
@@ -38,37 +38,37 @@ export const Table = () => {
               <h3 class="sticky-header">Age limt</h3>
               <div className="ageContainer">
                 <div className="elements">
-                  <div className="insideelement">GeneralAge</div>
+                  <div className="insideelement">GENERAL</div>
                   <div className="insideelement">{item.generalAge}</div>
                 </div>
 
                 <div className="elements">
-                  <div className="insideelement">FemaleAge</div>
+                  <div className="insideelement">FEMALE</div>
                   <div className="insideelement">{item.femaleAge}</div>
                 </div>
 
                 <div className="elements">
-                  <div className="insideelement">StScAge</div>
+                  <div className="insideelement">STSC</div>
                   <div className="insideelement">{item.stScAge}</div>
                 </div>
 
                 <div className="elements">
-                  <div className="insideelement">ObcAge</div>
+                  <div className="insideelement">OBC</div>
                   <div className="insideelement">{item.obcAge}</div>
                 </div>
 
                 <div className="elements">
-                  <div className="insideelement">PwdUnreservedAge</div>
+                  <div className="insideelement">PWC-UNRESERVED</div>
                   <div className="insideelement">{item.pwdUnreservedAge}</div>
                 </div>
 
                 <div className="elements">
-                  <div className="insideelement">ExServiceMenAge</div>
+                  <div className="insideelement">EX-SERVICEMEN</div>
                   <div className="insideelement">{item.exServiceMenAge}</div>
                 </div>
 
                 <div className="elements">
-                  <div className="insideelement">PwdObcAge</div>
+                  <div className="insideelement">PWD-OBC</div>
                   <div className="insideelement">{item.pwdObcAge}</div>
                 </div>
               </div>
@@ -76,45 +76,45 @@ export const Table = () => {
           </div>
           <div class="card">
             <div class="card-content">
-              <h3 class="sticky-header">Fee</h3>
+              <h3 class="sticky-header">Fee ₹</h3>
               <div className="feeContainer">
                 <div className="elements">
-                  <div className="insideelement">GeneralFee</div>
+                  <div className="insideelement">GENERAL</div>
                   <div className="insideelement">₹{item.generalFee}</div>
                 </div>
 
                 <div className="elements">
-                  <div className="insideelement">FemaleFee</div>
+                  <div className="insideelement">FEMALE</div>
                   <div className="insideelement">₹{item.femaleFee}</div>
                 </div>
 
                 <div className="elements">
-                  <div className="insideelement">ObcFee</div>
+                  <div className="insideelement">OBC</div>
                   <div className="insideelement">₹{item.obcFee}</div>
                 </div>
 
                 <div className="elements">
-                  <div className="insideelement">EwsFee</div>
+                  <div className="insideelement">EWS</div>
                   <div className="insideelement">₹{item.ewsFee}</div>
                 </div>
 
                 <div className="elements">
-                  <div className="insideelement">StScFee</div>
+                  <div className="insideelement">STSC</div>
                   <div className="insideelement">₹{item.stScFee}</div>
                 </div>
 
                 <div className="elements">
-                  <div className="insideelement">PwdObcFee</div>
+                  <div className="insideelement">PWD-OBC</div>
                   <div className="insideelement">₹{item.pwdObcFee}</div>
                 </div>
 
                 <div className="elements">
-                  <div className="insideelement">CorrectionFee1Fee</div>
+                  <div className="insideelement">CORRECTION</div>
                   <div className="insideelement">₹{item.correctionFee1Fee}</div>
                 </div>
 
                 <div className="elements">
-                  <div className="insideelement">CorrectionFee2Fee</div>
+                  <div className="insideelement">CORRECTION2</div>
                   <div className="insideelement">₹{item.correctionFee2Fee}</div>
                 </div>
               </div>
@@ -123,16 +123,16 @@ export const Table = () => {
         </div>
       </div>
 
-      <div>
-        <a className="applynow" href={item.apply}>Apply Now</a>
-      </div>
       <div className="tablebutton">
-        <button>
-          <NavLink to="/eligible" className="nav-link">
-            Check eligiablity{" "}
+      <button class="rainbow-hover"><a href={item.apply}>Apply Now</a></button>
+        {/* <button style={{pointerEvents:"none",opacity:"0.5"}}>
+          <NavLink to="/eligible" className="nav-link ">
+            Check eligiablity
           </NavLink>
-        </button>
-        <button onClick={backbutton}>Back</button>
+        </button> */}
+        <button class="rainbow-hover" onClick={backbutton}>Back</button>
+
+
       </div>
 
       {/* <div className="container">

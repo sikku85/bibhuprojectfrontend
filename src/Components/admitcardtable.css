@@ -2,10 +2,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* height: 100vh; */
+    height: 95vh;
     flex-direction: column;
     font-weight: bolder;
-    margin-top: 200px;
+    /* margin-top: 200px; */
+    background-color: #44b09e;
+
 }
 .admitcardcontainer .link{
     color: black;

@@ -1,11 +1,32 @@
 import React from "react";
 import { Generalinfo } from "./Generalinfo";
+import { useState } from "react";
 import "./NewHomepage.css";
 import { Cardsection } from "./Cardsection";
 import { Hometable } from "./Hometable";
 import { Footer } from "./Footer";
+import { Testingitem } from "./Testingitem";
+import { AdmitcardHomeTable } from "./AdmitcardHomeTable";
 
 export const Home = () => {
+  const [selectedTable, setSelectedTable] = useState('table1');
+  const [defaultvalue, setDefaultvalue] = useState(0);
+  function clickhandler() {
+    setDefaultvalue(1);
+    setSelectedTable('table1');
+    
+  }
+  function clickhandler2() {
+    setDefaultvalue(1);
+    setSelectedTable('table2');
+    
+  }
+  function clickhandler3() {
+    setDefaultvalue(1);
+    setSelectedTable('table3');
+    
+  }
+
   return (
     <div className="Homewrapper">
       {/* container no1 */}
@@ -34,13 +55,31 @@ export const Home = () => {
         <br />
 
         {/* Table start Here */}
-        <Hometable></Hometable>
+        
+
+       
+        <div  className="btnhome">
+        <button onClick={clickhandler} className={selectedTable === 'table1' ? 'activ' : ''}>All Posts</button>
+        <button onClick={clickhandler2} className={selectedTable === 'table2' ? 'activ' : ''}>AdmitCards</button>
+        <button onClick={clickhandler3} className={selectedTable === 'table3' ? 'activ' : ''}>Results</button>
+
+        </div>
+        {
+          defaultvalue==0 && <Hometable></Hometable>
+        }
+       
+        {selectedTable === 'table1' && defaultvalue==1 && <Hometable />}
+        {selectedTable === 'table2' && <AdmitcardHomeTable />}
+        {selectedTable === 'table3' && <Hometable />}
+
+        {/* <Hometable></Hometable> */}
         {/* Table end Here */}
 
         {/* about the section page */}
 
         <Generalinfo></Generalinfo>
         <br />
+        {/* <Testingitem></Testingitem> */}
         <Footer></Footer>
         <div className="forspacing"></div>
 

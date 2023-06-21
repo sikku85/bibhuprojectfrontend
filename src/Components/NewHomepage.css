@@ -1,15 +1,23 @@
 .Homewrapper{
     /* height: 95vh; */
     /* background-color: red; */
+    width: 100vw;
     display: flex;
     justify-content: center;
-    background-color: #e8e8e8;
+    /* background-color: #e8e8e8; */
+    /* background-color: #44b09e; */
+    /* background-color: #7f5a83; */
+    background: linear-gradient(to top, #a1b8e2 0%, #a2b7de 1%, #5b78aa 100%);
+    /* background: linear-gradient(109.6deg, rgb(223, 234, 247) 11.2%, rgb(244, 248, 252) 91.1%); */
+
+
+/* background-image: linear-gradient(315deg, #44b09e 0%, #e0d2c7 74%); */
 
 }
 .Homeinsidewrapper{
     /* height: 95vh; */
     /* background-color: green; */
-    width: 1100px;
+    width: 80vw;
 }
 .Homeinside2titlewrapper{
     height: 100px;
@@ -29,12 +37,12 @@
     border-radius: 4px;
     /* padding: 10px; */
     width: 400px;
-    height: 350px;
+    height: 300px;
     overflow:hidden;
     margin: 3px 3px;
     background-color: white;
-    box-shadow: 15px 15px 30px #bebebe,
-             -15px -15px 30px #ffffff;
+    /* box-shadow: 15px 15px 30px #bebebe,
+             -15px -15px 30px #ffffff; */
 
   }
   
@@ -43,7 +51,7 @@
   }
   
   .card-content h3 {
-    font-size: 18px;
+    font-size: 15px;
     margin-top: 0;
     background-color:#3B82FC;
     color: white;
@@ -53,7 +61,7 @@
   .input-field::placeholder{
     text-align: center;
   line-height: inherit;
-  color: red; /* Replace 'red' with your desired color */
+  color: white; /* Replace 'red' with your desired color */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -91,17 +99,29 @@
 }
 .onhover{
   /* padding: 10px; */
-  font-size: large;
+  font-size:14px;
   color: black;
+  /* background-color: red; */
+  display: flex;
+  text-align: left;
+  
+  margin:9px;
+  /* padding: 5px; */
 }
 .forspacing{
     height: 50px;
 }
 .contex1{
-  /* color: white; */
+  color: white;
 }
 .contex2{
-  /* color: white; */
+  color: white;
+}
+.title{
+
+}
+.urltitle{
+
 }
 .searchPost{
   padding: 5px;
@@ -116,4 +136,15 @@
   color: red;
 }
  
-  
+.activ{
+  background: linear-gradient(to top, #00154c, #12376e, #23487f);
+  color: white;
+  pointer-events: none;
+  border-radius: 6px;
+}
+.btnhome button{
+  font-size:15px;
+}
+.btnhome{
+  display: flex;
+}
