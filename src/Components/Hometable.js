@@ -3,7 +3,7 @@ import "./Hometable.css";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import { AppContext } from "../context/AppContext";
-
+import { Searchsbar } from "./Searchsbar";
 export const Hometable = () => {
   const { result, setItem } = useContext(AppContext);
   const [searchQuery, setSearchQuery] = useState("");
@@ -25,7 +25,7 @@ export const Hometable = () => {
       <input
         className="searchPost  input-field"
         type="text"
-        placeholder="Search Post"
+        placeholder="Type Here...."
         value={searchQuery}
         onChange={handleSearch}
       />
@@ -74,13 +74,12 @@ export const Hometable = () => {
                 <td>
                   <button data-label="Register" class="rainbow-hover">
                     <span class="sp">
-                      <a
-                        href={item.apply}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Register
-                      </a>
+                    <td key={item._id} onClick={() => clickHadler(item._id)}>
+                  <NavLink to="/table" className="no-underline" >
+                    Apply Now
+                  </NavLink>
+                </td>
+
                     </span>
                   </button>
                   {/* <a className="register" href={item.apply} target="_blank" rel="noopener noreferrer">

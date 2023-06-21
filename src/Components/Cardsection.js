@@ -35,7 +35,7 @@ export const Cardsection = () => {
       const handleSearch2 = (event) => {
         setSearchQuery2(event.target.value);
       };
-      const filteredResults2 = admitcardresult.filter((ele) =>
+      const filteredResults2 = admitcardresult.slice(0,6).filter((ele) =>
         ele.title.toLowerCase().includes(searchQuery2.toLowerCase())
       );
 
@@ -43,58 +43,79 @@ export const Cardsection = () => {
     <div className="maincardcontainer">
           <div class="card">
             <div class="card-content">
-              <h3 class="sticky-header">Results</h3>
-              <p>This is the content of the card.</p>
+              <h3 class="sticky-header">Result</h3>
+              {/* <input
+              className="input-field"
+                type="text"
+                placeholder="Search jobs"
+                onChange={handleSearch}
+              /> */}
+              <ul>
+                {filteredResults.map((ele) => (
+                  <div key={ele.id} onClick={() => clickHadler(ele._id)} >
+                    
+                    <NavLink 
+                      to="/table"
+                      style={{ color: "black", textDecoration: "none"}}
+                    >
+                      <span className="onhover">{ele.title}</span>
+                    </NavLink>
+                  </div>
+                ))}
+              </ul>
             </div>
           </div>
 
           <div className="card">
             <div className="card-content">
               <h3 class="sticky-header">Admit Card</h3>
-              <input
+              {/* <input
               className="input-field"
                 type="text"
                 placeholder="Search Admit Card"
                 onChange={handleSearch2}
-              />
+              /> */}
               <ul>
                 {filteredResults2.map((ele) => (
-                  <li
+                  <div
                     key={ele._id}
                     onClick={() => clickHadleradmitcard(ele._id)}
+                    // style={{ paddingLeft: "10px", borderLeft: "2px solid black" }}
                   >
                     <NavLink
                       to="/admitcard"
                       style={{ color: "black", textDecoration: "none" }}
                     >
                       <span className="onhover">{ele.title}</span>
+                      
                     </NavLink>
-                  </li>
+                  </div>
+                  
                 ))}
               </ul>
             </div>
           </div>
 
           <div class="card">
-            <div class="card-content">
-              <h3 class="sticky-header">Latest Jobs</h3>
-              <input
+            <div class="card-content ticker-container">
+              <h3 class="sticky-header">Latest Job</h3>
+              {/* <input
               className="input-field"
                 type="text"
                 placeholder="Search jobs"
                 onChange={handleSearch}
-              />
+              /> */}
               <ul>
                 {filteredResults.map((ele) => (
-                  <li key={ele.id} onClick={() => clickHadler(ele._id)} >
+                  <div key={ele.id} onClick={() => clickHadler(ele._id)} >
                     
                     <NavLink 
                       to="/table"
-                      style={{ color: "black", textDecoration: "none",padding:"10px"}}
+                      style={{ color: "black", textDecoration: "none"}}
                     >
-                      <span className="onhover">{ele.title}</span>
+                      <div className="onhover testelement">{ele.title}</div>
                     </NavLink>
-                  </li>
+                  </div>
                 ))}
               </ul>
             </div>
