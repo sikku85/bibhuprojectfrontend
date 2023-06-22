@@ -5,20 +5,44 @@ import { useState } from "react";
 import { AppContext } from "../context/AppContext";
 import { Searchsbar } from "./Searchsbar";
 export const Hometable = () => {
-  const { result, setItem } = useContext(AppContext);
-  const [searchQuery, setSearchQuery] = useState("");
-  const mapingdata = [...result];
+  const [currentPage, setCurrentPage] = useState(1);
+  const [searchQuery, setSearchQuery] = useState('');
+  const {admitcardresult,result,setItem } = useContext(AppContext);
+  const data=[...result];
+  const itemsPerPage=6;
 
-  const handleSearch = (event) => {
-    const query = event.target.value;
-    setSearchQuery(query);
-  };
-  const filteredResults = mapingdata.filter((item) =>
-    item.title.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+
   function clickHadler(_id) {
     setItem(result.find((item) => item._id === _id));
   }
+  
+  // Function to handle search input change
+  const handleSearchChange = (event) => {
+    setSearchQuery(event.target.value);
+    setCurrentPage(1); // Reset to the first page when searching
+  };
+
+  // Calculate the index of the last item in the current page
+  const lastIndex = currentPage * itemsPerPage;
+  // Calculate the index of the first item in the current page
+  const firstIndex = lastIndex - itemsPerPage;
+
+  // Filter the data based on the search query
+  const filteredData = data.filter((item) =>
+    item.title.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
+  // Get the current items to display
+  const currentItems = filteredData.slice(firstIndex, lastIndex);
+
+  // Calculate the total number of pages
+  const totalPages = Math.ceil(filteredData.length / itemsPerPage);
+
+  // Function to handle page change
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
 
   return (
     <div>
@@ -27,7 +51,7 @@ export const Hometable = () => {
         type="text"
         placeholder="Search post"
         value={searchQuery}
-        onChange={handleSearch}
+        onChange={handleSearchChange}
       />
       <div className="scrool">
         <table className="rounded-table">
@@ -60,7 +84,7 @@ export const Hometable = () => {
             </tr>
           </thead>
           <tbody className="tablecontainer">
-            {filteredResults.map((item, index) => (
+            {currentItems.map((item, index) => (
               <tr key={index}>
                 <td key={item._id} onClick={() => clickHadler(item._id)}>
                   <NavLink to="/table" className="no-underline" >
@@ -90,6 +114,21 @@ export const Hometable = () => {
             ))}
           </tbody>
         </table>
+          {/* Render pagination buttons */}
+    
+      </div>
+      <div>
+        {Array.from({ length: totalPages }, (_, index) => index + 1).map(
+          (pageNumber) => (
+            <button
+              key={pageNumber}
+              onClick={() => handlePageChange(pageNumber)}
+              disabled={pageNumber === currentPage}
+            >
+              {pageNumber}
+            </button>
+          )
+        )}
       </div>
     </div>
   );

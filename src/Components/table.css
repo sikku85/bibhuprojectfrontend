@@ -127,7 +127,7 @@ button .nav-link {
     /* background-color: red; */
     /* margin: 0px 10px; */
     width: 25vw;
-    height: 58vh;
+    /* height: 58vh; */
     
 
 }
@@ -153,7 +153,7 @@ button .nav-link {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        background-color: #006d6f;
+        background-color: #ADD8E6;
 }
 
 .eletitle{

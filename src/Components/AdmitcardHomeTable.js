@@ -1,29 +1,57 @@
 import React, { useContext } from "react";
+import "./Hometable.css";
+import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import { AppContext } from "../context/AppContext";
-import { NavLink } from "react-router-dom";
-
-
+import { Searchsbar } from "./Searchsbar";
 export const AdmitcardHomeTable = () => {
-    const { admitcardresult } = useContext(AppContext);
-    const mapingdata = [...admitcardresult];
-    const [searchQuery, setSearchQuery] = useState("");
-    const handleSearch = (event) => {
-        const query = event.target.value;
-        setSearchQuery(query);
-      };
-      const filteredResults = mapingdata.filter((item) =>
-        item.title.toLowerCase().includes(searchQuery.toLowerCase())
-      );
+  const [currentPage, setCurrentPage] = useState(1);
+  const [searchQuery, setSearchQuery] = useState('');
+  const {admitcardresult,result,setItem } = useContext(AppContext);
+  const data=[...admitcardresult];
+  const itemsPerPage=6;
+
+
+  function clickHadler(_id) {
+    setItem(result.find((item) => item._id === _id));
+  }
+  
+  // Function to handle search input change
+  const handleSearchChange = (event) => {
+    setSearchQuery(event.target.value);
+    setCurrentPage(1); // Reset to the first page when searching
+  };
+
+  // Calculate the index of the last item in the current page
+  const lastIndex = currentPage * itemsPerPage;
+  // Calculate the index of the first item in the current page
+  const firstIndex = lastIndex - itemsPerPage;
+
+  // Filter the data based on the search query
+  const filteredData = data.filter((item) =>
+    item.title.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
+  // Get the current items to display
+  const currentItems = filteredData.slice(firstIndex, lastIndex);
+
+  // Calculate the total number of pages
+  const totalPages = Math.ceil(filteredData.length / itemsPerPage);
+
+  // Function to handle page change
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
 
   return (
     <div>
       <input
         className="searchPost  input-field"
         type="text"
-        placeholder="Search Post"
+        placeholder="Search post"
         value={searchQuery}
-        onChange={handleSearch}
+        onChange={handleSearchChange}
       />
       <div className="scrool">
         <table className="rounded-table">
@@ -35,7 +63,6 @@ export const AdmitcardHomeTable = () => {
               >
                 Post Name
               </th>
-            
               <th
                 style={{ backgroundColor: "#3B82FC", borderRadius: "5px" }}
                 class="sticky-header"
@@ -45,25 +72,25 @@ export const AdmitcardHomeTable = () => {
             </tr>
           </thead>
           <tbody className="tablecontainer">
-            {filteredResults.map((item, index) => (
+            {currentItems.map((item, index) => (
               <tr key={index}>
-                <td key={item._id} >
-                  {/* <NavLink to="/table" className="no-underline" > */}
+                <td key={item._id} onClick={() => clickHadler(item._id)}>
+                  <NavLink to="/table" className="no-underline" >
                     <span className="onhover" >{item.title}</span>
-                  {/* </NavLink> */}
+                  </NavLink>
                 </td>
 
+                {/* <td>{item.title}</td> */}
                 {/* <td>{item.title}</td> */}
                 <td>
                   <button data-label="Register" class="rainbow-hover">
                     <span class="sp">
-                      <a
-                        href={item.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Download
-                      </a>
+                    <td key={item._id} onClick={() => clickHadler(item._id)}>
+                  <NavLink to="/table" className="no-underline" >
+                    Download
+                  </NavLink>
+                </td>
+
                     </span>
                   </button>
                   {/* <a className="register" href={item.apply} target="_blank" rel="noopener noreferrer">
@@ -74,7 +101,22 @@ export const AdmitcardHomeTable = () => {
             ))}
           </tbody>
         </table>
+          {/* Render pagination buttons */}
+    
+      </div>
+      <div>
+        {Array.from({ length: totalPages }, (_, index) => index + 1).map(
+          (pageNumber) => (
+            <button
+              key={pageNumber}
+              onClick={() => handlePageChange(pageNumber)}
+              disabled={pageNumber === currentPage}
+            >
+              {pageNumber}
+            </button>
+          )
+        )}
       </div>
     </div>
-  )
-}
+  );
+};
