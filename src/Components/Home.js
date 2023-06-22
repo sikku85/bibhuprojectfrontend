@@ -5,8 +5,8 @@ import "./NewHomepage.css";
 import { Cardsection } from "./Cardsection";
 import { Hometable } from "./Hometable";
 import { Footer } from "./Footer";
-import { Testingitem } from "./Testingitem";
 import { AdmitcardHomeTable } from "./AdmitcardHomeTable";
+import PaginationTable from "./Testingitem";
 
 export const Home = () => {
   const [selectedTable, setSelectedTable] = useState('table1');
@@ -79,7 +79,7 @@ export const Home = () => {
 
         <Generalinfo></Generalinfo>
         <br />
-        {/* <Testingitem></Testingitem> */}
+        <PaginationTable></PaginationTable>
         <Footer></Footer>
         <div className="forspacing"></div>
 

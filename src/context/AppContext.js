@@ -12,15 +12,15 @@ export default function AppContextProvider({children}){
     const [eligiablityData, setEligiablityData] = useState("");
 
 
-//  hello
+ 
 
     async function fetchdata() {
         setLoading(true);
         try {
 
           
-          const response = await fetch(" https://7a86-2409-408a-e89-da8-b178-3e70-a5c-3ec4.ngrok-free.app/api/v1/upload/allimages");
-          const admitcardresponse=await fetch("https://7a86-2409-408a-e89-da8-b178-3e70-a5c-3ec4.ngrok-free.app/api/v1/upload/admitcardresult");
+          const response = await fetch("https://7edb-2409-408a-2c07-d10d-3c2c-4358-925c-3898.ngrok-free.app/api/v1/upload/allimages");
+          const admitcardresponse=await fetch("https://7edb-2409-408a-2c07-d10d-3c2c-4358-925c-3898.ngrok-free.app/api/v1/upload/admitcardresult");
           const data = await response.json();
           const admitcarddata=await admitcardresponse.json();
           console.log(data);
