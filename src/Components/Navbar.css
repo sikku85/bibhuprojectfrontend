@@ -2,10 +2,11 @@
     /* background-color: blue; */
     display: flex;
     justify-content: center;
-    height: 5vh;
+    /* height: 5vh; */
     /* background-image: linear-gradient(to right, #434343 0%, black 100%); */
     /* background-color: #a28089; */
-    background-color: #212121;
+    background-color: #3B82FC;
+    /* padding: 2px; */
 
 }
 .navbar{
@@ -20,15 +21,33 @@
 .left{
     display: flex;
     flex-direction: row;
+    padding: 3px;
+    /* background-color: red; */
+    /* width: 20vw; */
+    width: 100%;
+    justify-content: flex-end;
+
 
 }
 .left .btn{
-    margin: 3px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif
+    margin: auto 3px;
+    
+    /* font-family:Verdana, Geneva, Tahoma, sans-serif; */
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 .active{
-    color: white;
+    color: black;
+    background-color: white;
+    border-radius: 4px;
+    padding: 3px;
 }
 .Testdecoration{
     text-decoration: none;
+}
+
+@media (max-width: 600px) {
+    .left{
+        justify-content: center;
+    }
+    
 }
