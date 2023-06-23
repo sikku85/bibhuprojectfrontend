@@ -100,7 +100,7 @@ export const Hometable = () => {
                     <span class="sp">
                     <td key={item._id} onClick={() => clickHadler(item._id)}>
                   <NavLink to="/table" className="no-underline" >
-                    Apply Now
+                    apply
                   </NavLink>
                 </td>
 

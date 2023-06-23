@@ -79,7 +79,7 @@ export const Home = () => {
 
         <Generalinfo></Generalinfo>
         <br />
-        <PaginationTable></PaginationTable>
+        {/* <PaginationTable></PaginationTable> */}
         <Footer></Footer>
         <div className="forspacing"></div>
 

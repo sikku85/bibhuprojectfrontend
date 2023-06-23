@@ -31,6 +31,7 @@
 .maincardcontainer{
     display: flex;
     justify-content: center;
+    /* flex-direction: column; */
 }
 
 .card {
@@ -46,6 +47,20 @@
              -15px -15px 30px #ffffff; */
 
   }
+  @media (max-width: 600px) {
+    .maincardcontainer {
+      display: flex;
+      flex-direction: column-reverse;
+      
+    }
+  }
+ 
+  
+  
+  
+  
+  
+  
   
   .card-content {
     padding: 10px;

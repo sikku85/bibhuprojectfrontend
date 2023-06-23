@@ -15,7 +15,7 @@ export const Admitcardtable = () => {
         <div className="admitcardcontainer">
         
         <div className='aditem'>Title: {item.title}</div>
-        <div className='aditem'><a className='link' href={item.link} target='_blank'>Download</a></div>
+        <div className='aditem'><a className='link' href={item.link} target='_blank'>DownloadS</a></div>
         <button onClick={backbutton}>Back</button>
         </div>
         

@@ -75,9 +75,8 @@ export const AdmitcardHomeTable = () => {
             {currentItems.map((item, index) => (
               <tr key={index}>
                 <td key={item._id} onClick={() => clickHadler(item._id)}>
-                  <NavLink to="/table" className="no-underline" >
                     <span className="onhover" >{item.title}</span>
-                  </NavLink>
+                
                 </td>
 
                 {/* <td>{item.title}</td> */}
@@ -86,9 +85,8 @@ export const AdmitcardHomeTable = () => {
                   <button data-label="Register" class="rainbow-hover">
                     <span class="sp">
                     <td key={item._id} onClick={() => clickHadler(item._id)}>
-                  <NavLink to="/table" className="no-underline" >
-                    Download
-                  </NavLink>
+                    <div className=''><a className='' href={item.link} target='_blank'>Download</a></div>
+
                 </td>
 
                     </span>
