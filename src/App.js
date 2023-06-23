@@ -35,7 +35,7 @@ function App() {
         <Route path="/table" element={<Table></Table>}></Route>
         <Route path="/eligible" element={<Eligible></Eligible>}></Route>
         <Route path="/admin" element={<Admin></Admin>}></Route>
-        <Route path="/admitcard" element={<Admitcardtable></Admitcardtable>}></Route>
+        <Route path="/Admitcardtable" element={<Admitcardtable></Admitcardtable>}></Route>
 
       </Routes>
     </div>

@@ -139,7 +139,7 @@ export const Admin = () => {
     
 
      try {
-        await axios.post('http://localhost:4000/api/v1/upload/cloudfileupload', formData);
+        await axios.post('bibhuprojectbackendserver-3qca-7rri76h4i-sikku85.vercel.app/api/v1/upload/cloudfileupload', formData);
         console.log(formData);
         console.log('Image uploaded successfully');
         
