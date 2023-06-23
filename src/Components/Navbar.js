@@ -11,6 +11,8 @@ export const Navbar = () => {
             <div className='btn'><NavLink className="Testdecoration" to={"/"} >Home</NavLink></div>
             <div className='btn'><NavLink className="Testdecoration" to={"/about"}>About</NavLink></div>
             <div className='btn'><NavLink className="Testdecoration" to={"/contact"}>Contact</NavLink></div>
+            <div className='btn'><NavLink className="Testdecoration" to={"/admin"}>Admin</NavLink></div>
+
         </div>
         <div>
             <img src="" alt="" />

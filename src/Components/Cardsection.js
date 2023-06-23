@@ -83,7 +83,7 @@ export const Cardsection = () => {
                     // style={{ paddingLeft: "10px", borderLeft: "2px solid black" }}
                   >
                     <NavLink
-                      to="/admitcard"
+                      to="/Admitcardtable"
                       style={{ color: "black", textDecoration: "none" }}
                     >
                       <span className="onhover">{ele.title}</span>
